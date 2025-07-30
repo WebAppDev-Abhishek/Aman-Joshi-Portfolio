@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aman Joshi - Software Developer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" xintegrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0V4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff; /* Pure white background */
+            color: #334155; /* Darker text for readability */
+            font-size: 1rem; /* Base font size for consistency (text-base) */
+        }
+        .container {
+            max-width: 1024px; /* Max width for content */
+        }
+        .section-heading {
+            border-bottom: 2px solid #cbd5e1; /* Simple underline */
+            padding-bottom: 6px; /* Reduced padding */
+            margin-bottom: 20px; /* Reduced margin */
+            font-size: 1.6rem; /* Adjusted for desktop */
+        }
+        .skill-badge {
+            background-color: #dceafd; /* Light blue */
+            color: #193747; /* Darker blue text */
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        .skill-badge i {
+            margin-right: 6px;
+        }
+        .experience-item, .education-item {
+            border-left: 2px solid #94a3b8;
+            padding-left: 16px;
+            position: relative;
+        }
+        .experience-item::before, .education-item::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background-color: #94a3b8;
+            border-radius: 50%;
+            border: 2px solid #ffffff;
+        }
+        .scroll-to-top {
+            position: fixed;
+            bottom: 15px;
+            right: 15px;
+            background-color: #475569;
+            color: white;
+            padding: 8px 12px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            font-size: 0.9rem;
+        }
+        .list-item-with-icon {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        .list-item-with-icon i {
+            margin-right: 10px;
+            color: #64748b;
+            font-size: 1.1em; /* Adjusted to look good with text-base */
+            flex-shrink: 0;
+            padding-top: 2px;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .contact-item i {
+            margin-right: 10px;
+            color: #64748b;
+            font-size: 1.2em;
+        }
+
+        /* Responsive adjustments for smaller screens (phone view) */
+        @media (max-width: 768px) {
+            .header-name {
+                font-size: 2.2rem; /* Smaller name on mobile */
+            }
+            .header-title {
+                font-size: 1.1rem; /* Smaller title on mobile */
+            }
+            .section-heading {
+                font-size: 1.4rem; /* Smaller section headings on mobile */
+            }
+            /* Main content text size for phone view */
+            .profile-text,
+            .project-text,
+            .certification-text,
+            .language-text,
+            .contact-text {
+                font-size: 0.9rem; /* text-sm equivalent for mobile */
+            }
+            .experience-item p, /* Dates and company/university */
+            .education-item p {
+                font-size: 0.875rem; /* text-sm for these details on mobile */
+            }
+            .experience-item ul, /* Bullet points for work experience */
+            .education-item ul {
+                font-size: 0.8rem; /* text-xs equivalent for these lists on mobile */
+            }
+            .skill-badge {
+                font-size: 0.75rem; /* Even smaller skill badges on mobile */
+                padding: 3px 8px; /* Adjusted padding for smaller text */
+            }
+            .main-content-padding {
+                padding-left: 1rem; /* Reduced horizontal padding for main content */
+                padding-right: 1rem;
+            }
+            .list-item-with-icon {
+                margin-bottom: 6px; /* Slightly tighter spacing on mobile */
+            }
+            .list-item-with-icon i {
+                font-size: 1em; /* Slightly smaller icons on mobile */
+            }
+            .contact-item {
+                margin-bottom: 6px;
+            }
+            .contact-item i {
+                font-size: 1.1em;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header Section -->
+    <header class="bg-gray-900 text-white shadow-sm py-6 px-4 md:px-8 lg:px-16 border-b border-gray-700">
+        <div class="container mx-auto flex flex-col items-center justify-center">
+            <div class="text-center">
+                <h1 class="text-3xl md:text-4xl font-bold mb-0.5 header-name">AMAN JOSHI</h1>
+                <p class="text-lg md:text-xl font-light text-gray-300 header-title">SOFTWARE DEVELOPER</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto py-8 px-4 md:px-8 lg:px-16 main-content-padding">
+
+        <!-- Profile Section -->
+        <section id="profile" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Profile</h2>
+            <p class="text-base text-gray-700 leading-relaxed profile-text">
+                Motivated and detail-oriented BCA student with hands-on experience in programming, web development, and databases.
+                Certified in Python, SQL, and front-end development by IBM. Skilled in designing efficient, responsive web solutions.
+                Eager to contribute technical knowledge in an IT or software development role.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3"><i class="fas fa-cogs"></i> Skills</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-code"></i> Programming Languages</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fab fa-python"></i> Python (Intermediate)</span>
+                        <span class="skill-badge"><i class="fab fa-js"></i> JavaScript</span>
+                        <span class="skill-badge"><i class="fas fa-database"></i> SQL</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-globe"></i> Web Development</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-badge"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-badge"><i class="fab fa-python"></i> Django (Basic)</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-tools"></i> Tools & Technologies</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fas fa-code-branch"></i> Git</span>
+                        <span class="skill-badge"><i class="fas fa-laptop-code"></i> Visual Studio Code</span>
+                        <span class="skill-badge"><i class="fas fa-cloud"></i> IBM SkillsBuild</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-server"></i> Database</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fas fa-database"></i> SQL (Relational Databases)</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-chart-line"></i> Productivity</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fas fa-file-excel"></i> MS Office</span>
+                        <span class="skill-badge"><i class="fab fa-google"></i> Google Workspace</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-base font-medium text-gray-800 mb-1.5"><i class="fas fa-handshake"></i> Soft Skills</h3>
+                    <div class="flex flex-wrap gap-1.5">
+                        <span class="skill-badge"><i class="fas fa-users"></i> Teamwork</span>
+                        <span class="skill-badge"><i class="fas fa-user-tie"></i> Leadership</span>
+                        <span class="skill-badge"><i class="fas fa-clock"></i> Time Management</span>
+                        <span class="skill-badge"><i class="fas fa-lightbulb"></i> Critical Thinking</span>
+                        <span class="skill-badge"><i class="fas fa-comments"></i> Communication</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3"><i class="fas fa-laptop-code"></i> Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="py-3">
+                    <h3 class="text-lg font-semibold text-gray-800 mb-1.5"><i class="fas fa-laptop-code"></i> TeckHub - Learning Website</h3>
+                    <ul class="text-gray-700 space-y-1 text-base project-text">
+                        <li class="list-item-with-icon"><i class="fas fa-check-circle"></i> Developed a learning website where students can choose their teacher and buy their courses.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-check-circle"></i> Used HTML, CSS, JavaScript, and Django for front-end and backend.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-check-circle"></i> Integrated secure payment gateway and responsive UI design.</li>
+                    </ul>
+                </div>
+                <!-- Add more project sections here if available -->
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section id="experience" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Work Experience</h2>
+            <div class="space-y-4">
+                <div class="experience-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-briefcase"></i> Full Stack Developer Intern</h3>
+                    <p class="text-base text-gray-600">Code-B Solutions Pvt Ltd | APRIL 22, 2025 - JUNE 22, 2025</p>
+                    <ul class="text-gray-700 mt-1 space-y-0.5 text-base">
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Worked on web-based projects using Python and the Django framework.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Demonstrated strong coding skills and collaborative development.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Contributed to full-stack development tasks and participated in team-based project work.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-boxes"></i> Inventory Assistant</h3>
+                    <p class="text-base text-gray-600">Lifestyle Store - Vegas Mall, Inventory Department | SEPTEMBER 2023 - NOVEMBER 2024</p>
+                    <ul class="text-gray-700 mt-1 space-y-0.5 text-base">
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Maintained and updated digital inventory logs, ensuring accurate stock tracking.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Helped reduce stock discrepancies through regular checks and record-keeping.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Contributed to smooth inventory operations in a fast-paced retail environment.</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-hands-helping"></i> Tech Assistant Intern</h3>
+                    <p class="text-base text-gray-600">Joshi Associates - ICEGATE & DGFT Integration Projects | AUGUST 2022 - SEPTEMBER 2023</p>
+                    <ul class="text-gray-700 mt-1 space-y-0.5 text-base">
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Provided freelance support to businesses for setting up and managing ICEGATE and DGFT accounts.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Assisted in uploading import/export and license-related documents to government portals.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Ensured compliance with documentation standards and advised on common portal errors.</li>
+                        <li class="list-item-with-icon"><i class="fas fa-angle-right"></i> Maintained client records and delivered timely follow-ups.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Education</h2>
+            <div class="space-y-4">
+                <div class="education-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-graduation-cap"></i> Bachelor of Computer Applications (BCA)</h3>
+                    <p class="text-base text-gray-600">Indira Gandhi National Open University (IGNOU) | Currently in 3rd Year</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-school"></i> Senior Secondary - Commerce with Mathematics and Computer Applications</h3>
+                    <p class="text-base text-gray-600">Rajdhani Public School | 22-07-2022</p>
+                </div>
+                <div class="education-item">
+                    <h3 class="text-base font-medium text-gray-800"><i class="fas fa-laptop-code"></i> Python Full Stack Development</h3>
+                    <p class="text-base text-gray-600">IT Vedant Education | 30-06-2025</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Certifications</h2>
+            <ul class="text-gray-700 text-base space-y-1 certification-text">
+                <li class="list-item-with-icon"><i class="fas fa-certificate"></i> DOEACC 'O' Level</li>
+                <li class="list-item-with-icon"><i class="fas fa-award"></i> IBM Certified in Python, SQL, HTML & CSS</li>
+            </ul>
+        </section>
+
+        <!-- Languages Section -->
+        <section id="languages" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Languages</h2>
+            <ul class="text-gray-700 text-base space-y-1 language-text">
+                <li class="list-item-with-icon"><i class="fas fa-globe-americas"></i> English (Fluent)</li>
+                <li class="list-item-with-icon"><i class="fas fa-globe-americas"></i> Hindi (Native)</li>
+            </ul>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="mb-10 py-4">
+            <h2 class="font-semibold text-gray-800 section-heading mb-3">Contact</h2>
+            <div class="text-base text-gray-700 space-y-2 contact-text">
+                <p class="contact-item"><i class="fas fa-phone-alt"></i> <span class="font-medium">Phone:</span> 9319432723</p>
+                <p class="contact-item"><i class="fas fa-envelope"></i> <span class="font-medium">Email:</span> aj9285696@gmail.com</p>
+                <p class="contact-item"><i class="fas fa-map-marker-alt"></i> <span class="font-medium">Address:</span> H. No-56, Vikas Nagar, Uttam Nagar, Delhi-110059</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-gray-300 py-3 px-4 md:px-8 lg:px-16 text-center border-t border-gray-700">
+        <p class="text-xs">&copy; 2024 Aman Joshi. All rights reserved.</p>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top" onclick="scrollToTop()">
+        &#9650; <!-- Up arrow character -->
+    </div>
+
+    <script>
+        // JavaScript for scroll-to-top button functionality
+        window.onscroll = function() {
+            scrollFunction();
+        };
+
+        function scrollFunction() {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
